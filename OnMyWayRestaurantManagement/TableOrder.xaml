@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="OnMyWayRestaurantManagement.TableOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1500">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid Style="{StaticResource ContentRoot}"  x:Name="TableOrderGrid" Margin="0,0,0,41">
+            <mui:ModernTab SelectedSource="/DishesToOrder.xaml" Layout="List" Margin="0,0,0,10">
+                <mui:ModernTab.Links>
+                    <mui:Link DisplayName="Dishes" x:Name="az" Source="/DishesToOrder.xaml"/>
+                    <mui:Link DisplayName="Waiters/Waitresses" Source="/WaiterForTable.xaml"/>
+                    <mui:Link DisplayName="Bill" Source="/BillForTable.xaml"/>
+                </mui:ModernTab.Links>
+            </mui:ModernTab>
+        </Grid>
+        <Button x:Name="ButtonGoToAdminPanel" Click="EventGoToAdminPanel"  Content="Admin Panel" Margin="0,0,25,10" HorizontalAlignment="Right" Width="115" Height="26" VerticalAlignment="Bottom">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="OnMyWayRestaurantManagement.BillForTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="750">
+    <Grid Style="{StaticResource ContentRoot}" x:Name="BillGrid">
+        <ScrollViewer Margin="0,0,0,366">
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Payment Procedure:" Style="{StaticResource Heading2}" />
+                <TextBlock Text="Total of all taken dishes" />
+            </StackPanel>
+        </ScrollViewer>
+        <ListView x:Name="BillPaymentListView" HorizontalAlignment="Left" Height="290" Margin="10,45,0,0" VerticalAlignment="Top" Width="698">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="50"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DisheName}" Header="Dishe Name" Width="140"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DisheDescription}" Header="Description" Width="385"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DishePrice}" Header="Price" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Submit Payment" Click="SubmitPayment"  Margin="0,0,10,14" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="115" FontSize="11">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Refresh" Click="RefreshBill"  Margin="0,0,130,14" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="115">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="Total" HorizontalAlignment="Left" Margin="593,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115"/>
+        <TextBlock HorizontalAlignment="Left" Margin="553,340,0,0" TextWrapping="Wrap" Text="Total:" VerticalAlignment="Top" Width="35"/>
+    </Grid>
+</UserControl>

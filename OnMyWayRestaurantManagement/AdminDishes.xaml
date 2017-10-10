@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="OnMyWayRestaurantManagement.AdminDishes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             MinWidth="844" MinHeight="505">
+    <Grid Style="{StaticResource ContentRoot}">
+        <DataGrid x:Name="DishesDataGrid" AutoGenerateColumns="False" CanUserAddRows="false" Margin="0,0,0,35">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="DisheId" Binding="{Binding DisheId}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="DisheName" Binding="{Binding DisheName}" />
+                <DataGridTextColumn Header="DisheDescription" Binding="{Binding DisheDescription}" />
+                <DataGridTextColumn Header="DishePrice" Binding="{Binding DishePrice}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Click="ShowDishes" Content="Refresh" HorizontalAlignment="Right" Margin="0,0,358,4" Width="98" Height="26" VerticalAlignment="Bottom">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="EventAddDishe" Content="New Dishe" HorizontalAlignment="Right" Margin="0,0,120,4" Width="98" Height="26" VerticalAlignment="Bottom">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="EventUpdateDishes" Content="Save Dishes" Margin="0,0,10,4" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="105">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Click="EventDeleteDishes" Content="Delete Selection" Margin="0,0,223,4" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#66800000"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

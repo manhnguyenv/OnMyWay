@@ -1,0 +1,18 @@
+﻿<mui:ModernWindow x:Class="OnMyWayRestaurantManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="OnMyWay - Restaurant Management" IsTitleVisible="True"
+        ContentSource="/Pages/Home.xaml"
+        MinWidth="1440" MinHeight="900"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="welcome">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="table order" Source="/TableOrder.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>

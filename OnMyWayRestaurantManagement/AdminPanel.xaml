@@ -1,0 +1,22 @@
+﻿<mui:ModernWindow x:Class="OnMyWayRestaurantManagement.AdminPanel"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  Title="OnMyWay - Admin Panel" IsTitleVisible="True"
+                  ContentSource="/AdminDishes.xaml"
+                  MinWidth="1125" MinHeight="675"
+                  WindowStartupLocation="CenterScreen">
+    
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Administration Panel">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Dishes" Source="/AdminDishes.xaml" />
+                <mui:Link DisplayName="Waiters"  Source="/AdminWaiters.xaml"/>
+                <mui:Link DisplayName="Restaurant Map"  Source="/AdminMap.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+</mui:ModernWindow>
